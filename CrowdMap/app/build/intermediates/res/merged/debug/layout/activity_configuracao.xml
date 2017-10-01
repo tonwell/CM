@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:scrollbars="vertical" >
+    <TextView
+        android:id="@+id/txt_coleta"
+        style="@style/UserInputText"
+        android:text="@string/tempo_coleta" />
+    <TextView
+        android:id="@+id/desc_coleta"
+        style="@style/UserInputText.Desc"
+        android:text="@string/desc_coleta"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/edt_coleta"
+            style="@style/EdtCfg" />
+        <TextView
+            style="@style/UserInputText.EdtLbl"
+            android:text="@string/minutos"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_sqlite"
+            style="@style/UserInputText"
+            android:text="@string/sqlite" />
+        <TextView
+            android:id="@+id/desc_sqlite"
+            style="@style/UserInputText.Desc"
+            android:text="@string/desc_sqlite"/>
+        <SeekBar
+            android:id="@+id/sb_sqlite"
+            style="@style/SBar" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_cache"
+            style="@style/UserInputText"
+            android:text="@string/cache" />
+        <TextView
+            android:id="@+id/desc_cache"
+            style="@style/UserInputText.Desc"
+            android:text="@string/desc_cache"/>
+        <SeekBar
+            android:id="@+id/sb_cache"
+            style="@style/SBar"
+            android:max="100"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_apply"
+        style="@style/ButtonCfg"
+        android:text="@string/btn_config"/>
+    <!-- About -->
+    <TextView
+        style="@style/UserInputText.About"
+        android:text="@string/about"/>
+    <View style="@style/CustomLine" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            style="@style/ListImg"
+            android:src="@drawable/labtempo"/>
+        <TextView
+            style="@style/UserInputText.ListTxt"
+            android:text="@string/labtempo" />
+    </LinearLayout>
+    <View style="@style/CustomLine" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            style="@style/ListImg"
+            android:src="@drawable/ic_uff"/>
+        <TextView
+            style="@style/UserInputText.ListTxt"
+            android:text="@string/ic_uff" />
+    </LinearLayout>
+    <View style="@style/CustomLine" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            style="@style/ListImg"
+            android:src="@drawable/uff"/>
+        <TextView
+            style="@style/UserInputText.ListTxt"
+            android:text="@string/uff" />
+    </LinearLayout>
+    <View style="@style/CustomLine" />
+</LinearLayout>
+</ScrollView>
+
+<!--
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <CheckBox android:id="@+id/cb_claro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Claro"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/cb_oi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oi"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/cb_tim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tim"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/cb_vivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vivo"
+                android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <RadioButton android:id="@+id/best_op"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Melhor"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/worst_op"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pior"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="ativarColeta"
+            android:text="@string/salvar"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
+--><!-- From: file:/home/ton/droid/CrowdMap/CrowdMap/app/src/main/res/layout/activity_configuracao.xml -->

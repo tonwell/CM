@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.danieljr.crowdmap.MainActivity" >
+
+    <item
+        android:id="@+id/config"
+        android:orderInCategory="100"
+        android:title="@string/config"
+        app:showAsAction="never" />
+
+</menu>
+<!-- From: file:/media/Dados/workspace/CrowdMap/app/src/main/res/menu/main.xml -->

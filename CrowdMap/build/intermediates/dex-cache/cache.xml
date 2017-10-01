@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-0611e04fe1a8686dd91da5e3a29d9b5ec0d52a01.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-49167c985d5d6bb196e7b439238c6295d17792f6.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e56f31b23ddb067f95f01255295167db7c798612">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-27773906266ccdbe7ec987b89ac24ce2a83447de.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="679251204de40ace98776a6f4e3a649c27e3d89f">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-bc429872b83947daa4ad92b7d8aaa510947699b0.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-b76309d3f587770d802a2ddff204291593eb2f7a.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-823041baba99ad0df995416fd27dca75d7ffc66e.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="fbb3885c40e431cd2b0dc69c0cab2bf6d5da7b43">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-1344980621b341312cb80874b0e798b7c9449f19.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-2c11faf2fc143320611f3a79c14dff3fcb8fb539.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-b5c9847c1c7d20beb3fcf6e5443febf22716c4a4.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-23b813194b4bfb6ae82bae0b8dcbb0fedbe6b3de.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-0524e2b55b4ff57f394472335a1f294ea9da0939.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3daa7a9c9009fd386872a84c177a76979bdcafd6">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-533379d2c12988d6d2f6e8d44026d882b68c2dc1.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2d3035050a075484cbf2e33f1ce1f779bae4d451">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-bc8da06bc60fa76cb95f0fa0558f156383414cc1.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-0573f88c30aa28d4ce8b027b7ba4c6b70ed00b65.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="190a642ba16d1421296a4d794606279b80039c59">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-c728cb5158a4718f3012979d25ef88709eed001e.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-9adcc5999debb098795774a82de509979f24d063.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-dd53539220a0fa9efe159ae5f818d2eed45bf778.jar" />
+    </item>
+    <item
+        jar="/home/ton/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0-ee5d2eb2ba671142ad964d3adc9da04bb355bc1d.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-a363188cb1f8e1c5f005dda5b6a5c14e8bad0dd2.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-505dfbba52ed593eb3c835a6be77a12a5f815f35.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-83f39a3cbde58ae0dfd16a5453031c3bf9b2422b.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-7914d68bceacd8dcbedfd97b9073c7acc5c86b84.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-929fa87278024eb07b8f7e584b31e6fcaebe193a.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a2537b11ae24b42172d34e2a613fc0b903c56158">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-ffc337ad07421da164059c5f68315cbd98e923e4.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-534e17d19a57816da8bd161256d3b4830a097d50.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9ff04cc3470178a44512624036751a803418c2ca">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-fc9bf65ddedf1f12d72798098d0b61085b2a8857.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-6556e4d09e00b0bd07075f8aabb5f084da401054.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-57440ff854b867c87c0bea6d418d1e45a207dafc.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a972970c8beddb69c198f61f3fc55f0606a7dfe3">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-db0ac57475848d7be2d66e536aec7f9a1f72b41c.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-5d25e485c5bd6d7d42479ea3c4de07766b5e6b42.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-79b104605895357f99a4205ead9ccd4d1446f31e.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-1bd45fca583031a4682a4d6104208fd868966e8e.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-ceb25a5de21c42ca2325259062a22d84b5b73e7d.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-2b3a05a9afdb4f92ec0cf22fe603371a12a2dc05.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-76a6c2a84eeb7a595a17620218fad7b53bb09ea1.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-dc4f282506b251deec4de37f50e3ec715725288c.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-65ec8479385ec2931166aca5e26b91bf1a7fc454.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-02ab12385985f65d0662c9a087310159738dbec4.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-5468efab9d0beaa6f9c66c960a10344653693987.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-ab61ca31453f2dd16a411d585f8873ec543752ff.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-caa6915c042f48ca00f0877a6a6c383e8012fedd.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="20a3c4e355150c15c13dd58045d43ad0c717d916">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-c53b6e1c6309c2c1235e09d41ecb4c8d89f1aec9.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-da72ee6dd5fdf7107cb384668ade3c39cdeb623e.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-69de83a8dccfaa539f5d615de8ec47e1c4ada652.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-e1c53acb8f6049a4014efaddfce567368aeb26f3.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-638d1c38e99529b2ed91ad9488cd1f319859a88d.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="74ac7cbcf0de4a88e59612dc3a9e3f9e71acb4ca">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-923207b0a748debe6962be00382952c023d7bf36.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="289cad663c288ce965463cb9ece8b35cc7de0fac">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-3d6fbd59262be9240b6c9066e44858d4c52ed61b.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-b98aab64a07b810f97a969108e17ba63f5db8396.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c81df6bd515398ebe45089b0b16c55752a131f6a">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-65cb0b298b7ea2e814b7bf8173151d211f294bb1.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-fa195e609dcddf0250d835ee9d2a9b8002373ec1.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-3aff742c97c9706bbdbe4e2278687ba62545658a.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-ffc1186f981ed4734e5a2ae25e040ad99f406607.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-4dd3f84aa8a1386214fca24e939c1c1467a6c1ea.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-c551378f933ec0e986b887e7e7a77c438a8f115f.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-6c9004b0c0ceac5eaa8f061b3ae400d05d7f5db2.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-6bcfe67a2cc4ebd9c7e93fc6d9fbae5d691cb738.jar" />
+    </item>
+    <item
+        jar="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/pre-dexed/debug/classes-25733d324132dd04c86122cf2c63864225b81f44.jar" />
+    </item>
+
+</items>

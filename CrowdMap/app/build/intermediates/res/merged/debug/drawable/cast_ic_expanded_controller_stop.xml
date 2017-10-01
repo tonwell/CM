@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- activated -->
+    <item android:state_enabled="true"
+          android:drawable="@drawable/cast_ic_stop_circle_filled_white" />
+    <!-- deactivated -->
+    <item android:state_enabled="false"
+          android:drawable="@drawable/cast_ic_stop_circle_filled_grey600" />
+    <!-- default -->
+    <item android:drawable="@drawable/cast_ic_stop_circle_filled_white"/>
+</selector>
+<!-- From: file:/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.8.0/res/drawable/cast_ic_expanded_controller_stop.xml -->

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CrowdMap</string>
+    <string name="action_settings">Settings</string>
+    <string name="config">Configurações</string>
+    <string name="title_activity_configuracao">CrowdMap</string>
+	<string name="coleta">Coleta Ativada</string>
+	<string name="tempo_coleta">Intervalo de coleta: </string>
+    <string name="desc_coleta">Determina de quantos em quantos minutos será realizada a coleta de seus dados</string>
+	<string name="sqlite">Armazenamento de dados: </string>
+    <string name="desc_sqlite">Reserva espaço para armazenamento dos seus dados</string>
+    <string name="cache">Limpeza de cache: </string>
+    <string name="desc_cache" formatted="false">Quando o tamanho do banco de registros atingir 100% do espaço reservado para armazenamento (item acima), será executada uma limpeza nesse banco, apagando X% (X definido pela barra) dos registros, sendo esses os menos relevantes</string>
+    <string name="labtempo">LabTempo</string>
+    <string name="ic_uff">Instituto de Computação</string>
+    <string name="uff">UFF</string>
+    <string name="about_crowdmap">CrowdMap - Copyright</string>
+    <string name="btn_config">Ver Mapa</string>
+    <string name="about">About</string>
+    <string name="minutos">minuto(s)</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+          android:constantSize="true">
+    <item android:state_enabled="false" android:state_pressed="true"
+          android:drawable="@android:color/transparent" />
+    <item android:state_enabled="false"
+          android:drawable="@android:color/transparent" />
+    <item android:state_pressed="true">
+        <bitmap android:src="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_005"
+                android:gravity="center"/>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_000"
+                android:gravity="center"/>
+    </item>
+</selector>
+
+<!-- From: file:/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.8.0/res/drawable/cast_expanded_controller_seekbar_thumb.xml -->
