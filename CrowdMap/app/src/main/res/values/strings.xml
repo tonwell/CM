@@ -18,4 +18,5 @@
     <string name="btn_config">Ver Mapa</string>
     <string name="about">About</string>
     <string name="minutos">minuto(s)</string>
+    <string name="API_KEY">AIzaSyBjZaP8XnTpd7sqk2HPqkpobsxW2ZsyQW4</string>
 </resources>

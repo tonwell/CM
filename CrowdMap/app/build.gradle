@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.1'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.1'
     defaultConfig {
-        applicationId "droid.droid.crowdmap"
-        minSdkVersion 10
-        targetSdkVersion 21
+        applicationId "droid.crowdmap"
+        minSdkVersion 14
+        targetSdkVersion 27
     }
     buildTypes {
         release {
@@ -22,5 +22,7 @@ android {
 }
 
 dependencies {
-    compile 'com.google.android.gms:play-services:+'
+    implementation 'com.android.support:appcompat-v7:+'
+    implementation 'com.google.android.gms:play-services-maps:11.0.2'
+    implementation 'com.google.android.gms:play-services-location:11.0.2'
 }

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
-    <gradient
-        android:angle="90"
-        android:startColor="@android:color/transparent"
-        android:endColor="@android:color/black"
-        android:type="linear" />
-</shape>
-<!-- From: file:/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.8.0/res/drawable/cast_expanded_controller_actionbar_bg_gradient_light.xml -->

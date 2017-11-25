@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/quantum_ic_replay_10_white_24" />
-<!-- From: file:/home/ton/droid/CrowdMap/CrowdMap/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.8.0/res/drawable/cast_ic_notification_rewind10.xml -->
