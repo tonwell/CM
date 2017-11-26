@@ -9,9 +9,6 @@ package droid.crowdmap;
 
 public final class Manifest {
   public static final class permission {
-    /**
-     * <uses-library android:name="com.google.android.maps" />
-     */
     public static final String MAPS_RECEIVE="droid.crowdmap.permission.MAPS_RECEIVE";
   }
 
