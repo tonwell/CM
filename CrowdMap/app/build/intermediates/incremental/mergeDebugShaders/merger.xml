@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/ton/Documents/CM/CrowdMap/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/ton/Documents/CM/CrowdMap/app/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/ton/Documents/CM_std/CrowdMap/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/ton/Documents/CM_std/CrowdMap/app/src/debug/shaders"/></dataSet></merger>

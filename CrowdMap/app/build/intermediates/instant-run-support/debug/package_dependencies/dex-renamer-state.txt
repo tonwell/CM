@@ -1,0 +1,4 @@
+#Sun Nov 26 13:09:26 BRST 2017
+base.0=/home/ton/Documents/CM_std/CrowdMap/app/build/intermediates/transforms/dexMerger/debug/10
+path.0=classes.dex
+renamed.0=classes.dex

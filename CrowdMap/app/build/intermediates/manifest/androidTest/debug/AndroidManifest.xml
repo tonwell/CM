@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="droid.droid.crowdmap.test">
+    package="droid.crowdmap.test">
 
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="21" />
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="27" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="droid.droid.crowdmap"
+                     android:targetPackage="droid.crowdmap"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for droid.droid.crowdmap"/>
+                     android:label="Tests for droid.crowdmap"/>
 </manifest>

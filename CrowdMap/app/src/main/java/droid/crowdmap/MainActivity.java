@@ -6,18 +6,19 @@ import java.util.List;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-
 
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -37,9 +38,9 @@ import droid.crowdmap.services.AlarmeColeta;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
-	private AlarmeColeta alarme;
-	private SupportMapFragment map;
-	private Location l;
+    private AlarmeColeta alarme;
+    private SupportMapFragment map;
+    private Location l;
     private GoogleMap gmap;
     private LatLng myLocation;
     private Operadora operadora;
@@ -89,10 +90,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     String IMEI;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         /*
         String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_MODE);
@@ -106,9 +107,19 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         alarme.setMinutos(sp.getInt("minutos", 10));
         quads = new ArrayList<LatLng>();
         TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         IMEI = tm.getDeviceId();
         map = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        if(map==null) Toast.makeText(this, "Mapa nulo", Toast.LENGTH_LONG).show();
+        if (map == null) Toast.makeText(this, "Mapa nulo", Toast.LENGTH_LONG).show();
 
         horizontals = new ArrayList<PolylineOptions>();
         verticals = new ArrayList<PolylineOptions>();
@@ -122,6 +133,16 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap mapa) {
         gmap = mapa;
         gmap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         gmap.setMyLocationEnabled(true);
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 

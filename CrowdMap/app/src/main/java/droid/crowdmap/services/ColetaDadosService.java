@@ -1,13 +1,16 @@
 package droid.crowdmap.services;
 
+import android.Manifest;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
@@ -31,25 +34,25 @@ import droid.crowdmap.modelos.Operadora;
 
 public class ColetaDadosService extends IntentService implements ConnectionCallbacks, OnConnectionFailedListener, LocationListener {
     DB db;
-	double latitude, longitude;
-	int sinal;
-	LocationManager locationManager;
-	private TelephonyManager mTelephonyManager;
-	private PhoneStateListener mPhoneStateListener;
+    double latitude, longitude;
+    int sinal;
+    LocationManager locationManager;
+    private TelephonyManager mTelephonyManager;
+    private PhoneStateListener mPhoneStateListener;
     private GoogleApiClient mGoogleApiClient;
     private Location mLastLocation;
     private LocationRequest mLocationRequest;
     private static final long INTERVAL = 1000 * 10;
     private static final long FASTEST_INTERVAL = 1000 * 5;
 
-	Operadora operadora;
+    Operadora operadora;
 
-	public ColetaDadosService() {
+    public ColetaDadosService() {
         super("Servico de salvar dados");
-	}
+    }
 
-	@Override
-	public void onCreate() {
+    @Override
+    public void onCreate() {
         createLocationRequest();
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -61,26 +64,46 @@ public class ColetaDadosService extends IntentService implements ConnectionCallb
         mTelephonyManager = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
         mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-	    mLastLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        mLastLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
         mPhoneStateListener = new PhoneStateListener() {
-			@Override
-			public void onSignalStrengthsChanged(SignalStrength signalStrength) {
+            @Override
+            public void onSignalStrengthsChanged(SignalStrength signalStrength) {
                 super.onSignalStrengthsChanged(signalStrength);
                 sinal = signalStrength.getGsmSignalStrength();
-			}
-		};
-		operadora = new Operadora(this);
-		db = DB.getInstance(this);
-        Log.i("Script", "Sinal: "+sinal);
-        Log.i("Script", "Operadora: "+operadora.getNome());
-		super.onCreate();
-  	}
+            }
+        };
+        operadora = new Operadora(this);
+        db = DB.getInstance(this);
+        Log.i("Script", "Sinal: " + sinal);
+        Log.i("Script", "Operadora: " + operadora.getNome());
+        super.onCreate();
+    }
 
     @Override
     public void onConnected(Bundle connectionHint) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if(mLastLocation != null) {
+        if (mLastLocation != null) {
             latitude = mLastLocation.getLatitude();
             longitude = mLastLocation.getLongitude();
         }
@@ -88,6 +111,16 @@ public class ColetaDadosService extends IntentService implements ConnectionCallb
     }
 
     protected void startLocationUpdates() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
     }
 
@@ -146,7 +179,7 @@ public class ColetaDadosService extends IntentService implements ConnectionCallb
             db.insert(d);
             for(int i=1; i<=15;i++) db.insert(d, "zoom"+i);
         }
-		return START_FLAG_REDELIVERY;
+		return START_REDELIVER_INTENT;
 	}
 
 	@Override
