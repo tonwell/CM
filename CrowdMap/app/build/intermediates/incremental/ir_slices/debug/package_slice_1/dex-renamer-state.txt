@@ -1,0 +1,4 @@
+#Sun Apr 01 18:01:55 BRT 2018
+base.0=/home/ton/tcc/CM/CrowdMap/app/build/intermediates/transforms/dexMerger/debug/1
+path.0=classes.dex
+renamed.0=classes.dex

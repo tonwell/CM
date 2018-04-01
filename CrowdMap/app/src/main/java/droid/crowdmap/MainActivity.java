@@ -23,10 +23,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMap.OnCameraChangeListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolylineOptions;
 
@@ -152,8 +150,68 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         l = locationManager.getLastKnownLocation(provider);
         myLocation = (l!=null) ? new LatLng(l.getLatitude(), l.getLongitude()) : uff;
         //myLocation = home;
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(myLocation).zoom(zooms[0]).build();
-        gmap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        //CameraPosition cameraPosition = new CameraPosition.Builder().target(myLocation).zoom(zooms[0]).build();
+        gmap.animateCamera(CameraUpdateFactory.newCameraPosition(gmap.getCameraPosition()));
+
+        gmap.setOnCameraMoveListener(new GoogleMap.OnCameraMoveListener() {
+            @Override
+            public void onCameraMove() {
+                gmap.clear();
+                float cameraPositionZoom = gmap.getCameraPosition().zoom;
+                int i;
+                if(cameraPositionZoom > zooms[0]){
+                    i = 0;
+                } else if(cameraPositionZoom > zooms[1]){
+                    i = 1;
+                } else if(cameraPositionZoom > zooms[2]){
+                    i = 2;
+                } else if(cameraPositionZoom > zooms[3]){
+                    i = 3;
+                } else if(cameraPositionZoom > zooms[4]){
+                    i = 4;
+                } else if(cameraPositionZoom > zooms[5]){
+                    i = 5;
+                } else if(cameraPositionZoom > zooms[6]){
+                    i = 6;
+                } else if(cameraPositionZoom > zooms[7]){
+                    i = 7;
+                } else if(cameraPositionZoom > zooms[8]){
+                    i = 8;
+                } else if(cameraPositionZoom > zooms[9]){
+                    i = 9;
+                } else if(cameraPositionZoom > zooms[10]){
+                    i = 10;
+                } else if(cameraPositionZoom > zooms[11]){
+                    i = 11;
+                } else if(cameraPositionZoom > zooms[12]){
+                    i = 12;
+                } else if(cameraPositionZoom > zooms[13]){
+                    i = 13;
+                } else if(cameraPositionZoom > zooms[14]){
+                    i = 14;
+                } else {
+                    i = 15;
+                }
+                horizontals = DrawAPI.drawLinesX(gmap, scales[i]);
+                verticals = DrawAPI.drawLinesY(gmap, scales[i]);
+                handleDrawLines(horizontals);
+                handleDrawLines(verticals);
+
+                for(PolylineOptions x : horizontals) {
+                    for (PolylineOptions y : verticals) {
+                        Dados d = new Dados();
+                        //Quadrantes na tela
+                        d.setLatitude(DrawAPI.getIdCoord(x.getPoints().get(0).latitude, scales[i]));
+                        d.setLongitude(DrawAPI.getIdCoord(y.getPoints().get(0).longitude, scales[i]));
+                        d.setOperadora(operadora.getNome());
+                        new GetQuadTask(MainActivity.this,scales[i]).execute(d);
+                    }
+                }
+            }
+
+        });
+
+        /*
         gmap.setOnCameraChangeListener(new OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
@@ -210,6 +268,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
 
         });
+        */
     }
 
     public void handleDrawLines(ArrayList<PolylineOptions> po) {
