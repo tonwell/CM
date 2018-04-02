@@ -151,7 +151,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         myLocation = (l!=null) ? new LatLng(l.getLatitude(), l.getLongitude()) : uff;
         //myLocation = home;
         //CameraPosition cameraPosition = new CameraPosition.Builder().target(myLocation).zoom(zooms[0]).build();
-        gmap.animateCamera(CameraUpdateFactory.newCameraPosition(gmap.getCameraPosition().target));
+        gmap.animateCamera(CameraUpdateFactory.newLatLngZoom(gmap.getCameraPosition().target, 15));
 
         gmap.setOnCameraMoveListener(new GoogleMap.OnCameraMoveListener() {
             @Override
