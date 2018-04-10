@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ton/tcc/CM/CrowdMap/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/ton/TCC/CM/CrowdMap/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/9b9234c53fab83774db89197c743f113/res/values/values.xml",
@@ -78,26 +78,26 @@
                     }
                 },
                 {
-                    "source": "/home/ton/tcc/CM/CrowdMap/app/src/main/res/values/attrs_line_view.xml",
+                    "source": "/home/ton/TCC/CM/CrowdMap/app/src/main/res/values/styles.xml",
                     "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endLines": "6",
-                        "endColumns": "24",
-                        "endOffsets": "307"
+                        "startLines": "39,59,54,34,49,2,24,12,18,30",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1721,2702,2480,1509,2249,57,1058,511,781,1339",
+                        "endLines": "48,65,58,38,53,10,29,17,23,33",
+                        "endColumns": "12,12,12,12,12,12,12,12,12,12",
+                        "endOffsets": "2243,3034,2696,1715,2474,503,1333,775,1052,1503"
                     },
                     "to": {
-                        "startLines": "170",
-                        "startColumns": "4",
-                        "startOffsets": "19345",
-                        "endLines": "175",
-                        "endColumns": "24",
-                        "endOffsets": "19632"
+                        "startLines": "1609,1619,1626,1631,1788,1902,1911,1917,1923,1929",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "111932,112450,112781,112998,123869,133823,134266,134541,134805,135076",
+                        "endLines": "1618,1625,1630,1635,1792,1910,1916,1922,1928,1932",
+                        "endColumns": "12,12,12,12,12,12,12,12,12,12",
+                        "endOffsets": "112445,112776,112993,113200,124090,134261,134536,134800,135071,135237"
                     }
                 },
                 {
-                    "source": "/home/ton/tcc/CM/CrowdMap/app/src/main/res/values/dimens.xml",
+                    "source": "/home/ton/TCC/CM/CrowdMap/app/src/main/res/values/dimens.xml",
                     "from": {
                         "startLines": "3,4",
                         "startColumns": "4,4",
@@ -111,23 +111,6 @@
                         "startOffsets": "36191,36249",
                         "endColumns": "57,55",
                         "endOffsets": "36244,36300"
-                    }
-                },
-                {
-                    "source": "/home/ton/tcc/CM/CrowdMap/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "20,18,16,3,2,17,11,6,4,12,8,10,14,13,19,9,7,5,15",
-                        "startColumns": "4,4,4,4,4,4,4,1,4,4,4,4,4,4,4,1,1,4,4",
-                        "startOffsets": "1336,1248,1134,104,57,1199,650,271,158,704,383,560,1037,990,1289,499,319,208,1097",
-                        "endColumns": "75,39,63,52,45,47,52,46,48,284,117,88,58,45,45,56,59,64,35",
-                        "endOffsets": "1407,1283,1193,152,98,1242,698,316,202,984,496,644,1091,1031,1330,554,377,268,1128"
-                    },
-                    "to": {
-                        "startLines": "505,535,536,537,538,539,540,541,559,560,561,562,563,564,565,567,569,570,571",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "40027,42222,42262,42326,42379,42425,42473,42526,44793,44842,45127,45245,45334,45393,45439,45538,45669,45732,45797",
-                        "endColumns": "75,39,63,52,45,47,52,49,48,284,117,88,58,45,45,59,62,64,35",
-                        "endOffsets": "40098,42257,42321,42374,42420,42468,42521,42571,44837,45122,45240,45329,45388,45434,45480,45593,45727,45792,45828"
                     }
                 },
                 {
@@ -150,22 +133,39 @@
                     }
                 },
                 {
-                    "source": "/home/ton/tcc/CM/CrowdMap/app/src/main/res/values/styles.xml",
+                    "source": "/home/ton/TCC/CM/CrowdMap/app/src/main/res/values/attrs_line_view.xml",
                     "from": {
-                        "startLines": "39,59,54,34,49,2,24,12,18,30",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1721,2702,2480,1509,2249,57,1058,511,781,1339",
-                        "endLines": "48,65,58,38,53,10,29,17,23,33",
-                        "endColumns": "12,12,12,12,12,12,12,12,12,12",
-                        "endOffsets": "2243,3034,2696,1715,2474,503,1333,775,1052,1503"
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endLines": "6",
+                        "endColumns": "24",
+                        "endOffsets": "307"
                     },
                     "to": {
-                        "startLines": "1609,1619,1626,1631,1788,1902,1911,1917,1923,1929",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "111932,112450,112781,112998,123869,133823,134266,134541,134805,135076",
-                        "endLines": "1618,1625,1630,1635,1792,1910,1916,1922,1928,1932",
-                        "endColumns": "12,12,12,12,12,12,12,12,12,12",
-                        "endOffsets": "112445,112776,112993,113200,124090,134261,134536,134800,135071,135237"
+                        "startLines": "170",
+                        "startColumns": "4",
+                        "startOffsets": "19345",
+                        "endLines": "175",
+                        "endColumns": "24",
+                        "endOffsets": "19632"
+                    }
+                },
+                {
+                    "source": "/home/ton/TCC/CM/CrowdMap/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "20,18,16,3,2,17,11,6,4,12,8,10,14,13,19,9,7,5,15",
+                        "startColumns": "4,4,4,4,4,4,4,1,4,4,4,4,4,4,4,1,1,4,4",
+                        "startOffsets": "1336,1248,1134,104,57,1199,650,271,158,704,383,560,1037,990,1289,499,319,208,1097",
+                        "endColumns": "75,39,63,52,45,47,52,46,48,284,117,88,58,45,45,56,59,64,35",
+                        "endOffsets": "1407,1283,1193,152,98,1242,698,316,202,984,496,644,1091,1031,1330,554,377,268,1128"
+                    },
+                    "to": {
+                        "startLines": "505,535,536,537,538,539,540,541,559,560,561,562,563,564,565,567,569,570,571",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "40027,42222,42262,42326,42379,42425,42473,42526,44793,44842,45127,45245,45334,45393,45439,45538,45669,45732,45797",
+                        "endColumns": "75,39,63,52,45,47,52,49,48,284,117,88,58,45,45,59,62,64,35",
+                        "endOffsets": "40098,42257,42321,42374,42420,42468,42521,42571,44837,45122,45240,45329,45388,45434,45480,45593,45727,45792,45828"
                     }
                 }
             ]

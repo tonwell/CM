@@ -106,25 +106,23 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         quads = new ArrayList<LatLng>();
         TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
+            final int REQUEST_PHONE=2;
+            ActivityCompat.requestPermissions(this,
+                new String[]{android.Manifest.permission.READ_PHONE_STATE},
+            REQUEST_PHONE);
+
+        } else {
+            IMEI = tm.getDeviceId();
+            map = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+            if (map == null) Toast.makeText(this, "Mapa nulo", Toast.LENGTH_LONG).show();
+
+            horizontals = new ArrayList<PolylineOptions>();
+            verticals = new ArrayList<PolylineOptions>();
+
+            operadora = new Operadora(this);
+
+            map.getMapAsync(this);
         }
-        IMEI = tm.getDeviceId();
-        map = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        if (map == null) Toast.makeText(this, "Mapa nulo", Toast.LENGTH_LONG).show();
-
-        horizontals = new ArrayList<PolylineOptions>();
-        verticals = new ArrayList<PolylineOptions>();
-
-        operadora = new Operadora(this);
-
-        map.getMapAsync(this);
     }
 
     @Override
@@ -132,16 +130,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         gmap = mapa;
         gmap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        gmap.setMyLocationEnabled(true);
+            final int REQUEST_LOCATION = 2;
+
+            ActivityCompat.requestPermissions(this,
+                 new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                     REQUEST_LOCATION);
+        } else {
+            gmap.setMyLocationEnabled(true);
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         Criteria criteria = new Criteria();
@@ -210,6 +205,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
 
         });
+    }        
 
         /*
         gmap.setOnCameraChangeListener(new OnCameraChangeListener() {
