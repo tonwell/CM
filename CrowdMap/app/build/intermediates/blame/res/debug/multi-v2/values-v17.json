@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ton/TCC/CM/CrowdMap/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
+            "outputFile": "/home/ton/tcc/CM/CrowdMap/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/9b9234c53fab83774db89197c743f113/res/values-v17/values-v17.xml",
+                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0faf154eba192559680bd9b49f781558/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ton/TCC/CM/CrowdMap/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "/home/ton/tcc/CM/CrowdMap/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
-                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/9b9234c53fab83774db89197c743f113/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0faf154eba192559680bd9b49f781558/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/24ca2e5f201c27510962fd3067b8d294/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/feaf54afc6c9379ac971641ae0f92bde/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
