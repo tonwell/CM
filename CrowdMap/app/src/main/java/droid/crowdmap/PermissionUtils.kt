@@ -11,8 +11,7 @@ object PermissionUtils {
     fun validate(activity: Activity, requestCode: Int, vararg permissions: String) : Boolean {
         val list = ArrayList<String>()
         for( permission in permissions) {
-            val ok = ContextCompat.checkSelfPermission(activity, permission)
-                == PackageManager.PERMISSION_GRANTED
+            val ok = ContextCompat.checkSelfPermission(activity, permission) == PackageManager.PERMISSION_GRANTED
             if(!ok)
                 list.add(permission)
         }
