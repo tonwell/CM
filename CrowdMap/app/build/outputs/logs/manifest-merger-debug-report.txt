@@ -4,24 +4,28 @@ ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManife
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:2:1-87:12
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:2:1-87:12
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:2:1-87:12
-MERGED from [com.android.support:design:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/022dfe6fbf6553b8657567f85981808a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/9e17b54ed1facc884c1a5faf7b0b4ab3/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:16:1-25:12
-MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/05e6818be11c00462b546e84f18f694f/AndroidManifest.xml:2:1-5:12
-MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/086c45fce2c6013127012f7aabad0548/AndroidManifest.xml:16:1-21:12
-MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/131d163886ab22dffc19ce93e60b11b6/AndroidManifest.xml:2:1-5:12
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/4214bb1fce540ee7bd837b1090430d52/AndroidManifest.xml:16:1-23:12
-MERGED from [com.android.support:support-v4:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/92f5ae728686cd225cc521fe6f6c18fa/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/e01958eba0988a98b129b06da3c43c2d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/c45669b8eae9958d2e4db0563c9e3b60/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/f36af9b1627087a4f50cfa15b1dc7c72/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/b4d7444b7b24c2d186adeac412b2001b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/f1b954b9a2a6e888f73e250f04cf866e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/d485ad85bd7b02522619efd4e8692a6f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/1beb03835a680dff427072893bbaea01/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/bc9806ea98fdb5752c08c2f04bfab969/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/7881df5566c5901112a5e6826e134130/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/ton/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/601ca53bdfa02cd1b14ed005828df576/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:design:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6233d7ce5ae8782e6da39b7e09a123fd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/09c9de28ea77bba2a50a7c758bc31f60/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/06a94dea7cf5bd69bd57b7e5fa07bb2f/AndroidManifest.xml:2:1-5:12
+MERGED from [android.arch.persistence.room:runtime:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0-alpha3.aar/64098260b4bfbbd9cb0547ed87332b5d/AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/43eda95b0799c500b49f0443a8fa9795/AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/b43af409fe56ace96f3c891d2de48ede/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/b8291e3089b0ed9604ca2ba9e2a8e318/AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:support-v4:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/c8b4dd6c5ef3a5d6b4cac3330cfa7775/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/15648d89d5345750acf58b2bbc3a955e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/f1272f90cb17d93844fdcab01b97a5e6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/525fddd89d050e7e9c549c102a62800f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/086eaf9594176b117b2a7d599a355e8c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/a1a3c7f05a924200bd8961775eeb4bc2/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence.room:support-db-impl:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/support-db-impl-1.0.0-alpha3.aar/cc700ad010b4119aa7ac4b753bffba67/AndroidManifest.xml:17:1-26:12
+MERGED from [android.arch.persistence.room:support-db:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/support-db-1.0.0-alpha3.aar/edb1e51910474b70bc7c3e9bbd4b44e4/AndroidManifest.xml:17:1-26:12
+MERGED from [android.arch.core:core:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/core-1.0.0-alpha3.aar/5a78da945e0f55e8b16d44978170cdb7/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/b74162639776a577e88554c2dadcf5f5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/5ce8b0484034d4620eca716e1cfd8ef1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/a85ddd605a3c57f89222dd0aabfe303d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/c7b4de03b8858f419c02e708ad5f50d5/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/ton/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/422ef2738c6a97d4c52d4fce9ccf9895/AndroidManifest.xml:17:1-24:12
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:2:1-87:12
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:2:1-87:12
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:2:1-87:12
@@ -43,42 +47,50 @@ uses-sdk
 ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:7:5-9:41
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:7:5-9:41
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/022dfe6fbf6553b8657567f85981808a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/022dfe6fbf6553b8657567f85981808a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/9e17b54ed1facc884c1a5faf7b0b4ab3/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/9e17b54ed1facc884c1a5faf7b0b4ab3/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/05e6818be11c00462b546e84f18f694f/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/05e6818be11c00462b546e84f18f694f/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/086c45fce2c6013127012f7aabad0548/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/086c45fce2c6013127012f7aabad0548/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/131d163886ab22dffc19ce93e60b11b6/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/131d163886ab22dffc19ce93e60b11b6/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/4214bb1fce540ee7bd837b1090430d52/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/4214bb1fce540ee7bd837b1090430d52/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/92f5ae728686cd225cc521fe6f6c18fa/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/92f5ae728686cd225cc521fe6f6c18fa/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/e01958eba0988a98b129b06da3c43c2d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/e01958eba0988a98b129b06da3c43c2d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/c45669b8eae9958d2e4db0563c9e3b60/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/c45669b8eae9958d2e4db0563c9e3b60/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/f36af9b1627087a4f50cfa15b1dc7c72/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/f36af9b1627087a4f50cfa15b1dc7c72/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/b4d7444b7b24c2d186adeac412b2001b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/b4d7444b7b24c2d186adeac412b2001b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/f1b954b9a2a6e888f73e250f04cf866e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/f1b954b9a2a6e888f73e250f04cf866e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/d485ad85bd7b02522619efd4e8692a6f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/d485ad85bd7b02522619efd4e8692a6f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/1beb03835a680dff427072893bbaea01/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/1beb03835a680dff427072893bbaea01/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/bc9806ea98fdb5752c08c2f04bfab969/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/bc9806ea98fdb5752c08c2f04bfab969/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/7881df5566c5901112a5e6826e134130/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/7881df5566c5901112a5e6826e134130/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/ton/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/601ca53bdfa02cd1b14ed005828df576/AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/ton/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/601ca53bdfa02cd1b14ed005828df576/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:design:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6233d7ce5ae8782e6da39b7e09a123fd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6233d7ce5ae8782e6da39b7e09a123fd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/09c9de28ea77bba2a50a7c758bc31f60/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/09c9de28ea77bba2a50a7c758bc31f60/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/06a94dea7cf5bd69bd57b7e5fa07bb2f/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/06a94dea7cf5bd69bd57b7e5fa07bb2f/AndroidManifest.xml:3:5-43
+MERGED from [android.arch.persistence.room:runtime:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0-alpha3.aar/64098260b4bfbbd9cb0547ed87332b5d/AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.persistence.room:runtime:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0-alpha3.aar/64098260b4bfbbd9cb0547ed87332b5d/AndroidManifest.xml:22:5-24:41
+MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/43eda95b0799c500b49f0443a8fa9795/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/43eda95b0799c500b49f0443a8fa9795/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/b43af409fe56ace96f3c891d2de48ede/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/b43af409fe56ace96f3c891d2de48ede/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/b8291e3089b0ed9604ca2ba9e2a8e318/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/b8291e3089b0ed9604ca2ba9e2a8e318/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/c8b4dd6c5ef3a5d6b4cac3330cfa7775/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/c8b4dd6c5ef3a5d6b4cac3330cfa7775/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/15648d89d5345750acf58b2bbc3a955e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/15648d89d5345750acf58b2bbc3a955e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/f1272f90cb17d93844fdcab01b97a5e6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/f1272f90cb17d93844fdcab01b97a5e6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/525fddd89d050e7e9c549c102a62800f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/525fddd89d050e7e9c549c102a62800f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/086eaf9594176b117b2a7d599a355e8c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/086eaf9594176b117b2a7d599a355e8c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/a1a3c7f05a924200bd8961775eeb4bc2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/a1a3c7f05a924200bd8961775eeb4bc2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:support-db-impl:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/support-db-impl-1.0.0-alpha3.aar/cc700ad010b4119aa7ac4b753bffba67/AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.persistence.room:support-db-impl:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/support-db-impl-1.0.0-alpha3.aar/cc700ad010b4119aa7ac4b753bffba67/AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.persistence.room:support-db:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/support-db-1.0.0-alpha3.aar/edb1e51910474b70bc7c3e9bbd4b44e4/AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.persistence.room:support-db:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/support-db-1.0.0-alpha3.aar/edb1e51910474b70bc7c3e9bbd4b44e4/AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.core:core:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/core-1.0.0-alpha3.aar/5a78da945e0f55e8b16d44978170cdb7/AndroidManifest.xml:22:5-24:41
+MERGED from [android.arch.core:core:1.0.0-alpha3] /home/ton/.gradle/caches/transforms-1/files-1.1/core-1.0.0-alpha3.aar/5a78da945e0f55e8b16d44978170cdb7/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/b74162639776a577e88554c2dadcf5f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/b74162639776a577e88554c2dadcf5f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/5ce8b0484034d4620eca716e1cfd8ef1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/5ce8b0484034d4620eca716e1cfd8ef1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/a85ddd605a3c57f89222dd0aabfe303d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/a85ddd605a3c57f89222dd0aabfe303d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/c7b4de03b8858f419c02e708ad5f50d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/c7b4de03b8858f419c02e708ad5f50d5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/ton/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/422ef2738c6a97d4c52d4fce9ccf9895/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/ton/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/422ef2738c6a97d4c52d4fce9ccf9895/AndroidManifest.xml:20:5-22:41
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:7:5-9:41
 INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
@@ -91,22 +103,22 @@ INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidMan
 		INJECTED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml
 uses-feature#0x00020000
 ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:11:5-13:35
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:21:5-77
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:21:5-77
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:21:5-77
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:21:5-77
 	android:glEsVersion
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:12:9-41
 	android:required
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:13:9-32
 uses-permission#android.permission.INTERNET
 ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:15:5-67
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:20:5-66
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:20:5-66
 	android:name
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:15:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:16:5-79
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:19:5-78
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:19:5-78
 	android:name
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:16:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
@@ -161,20 +173,18 @@ ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManife
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:33:22-65
 application
 ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:35:5-85:19
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/b55e16f68b35a4959d06f70ef1d179fc/AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/05e6818be11c00462b546e84f18f694f/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/05e6818be11c00462b546e84f18f694f/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/086c45fce2c6013127012f7aabad0548/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/086c45fce2c6013127012f7aabad0548/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/131d163886ab22dffc19ce93e60b11b6/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/131d163886ab22dffc19ce93e60b11b6/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/4214bb1fce540ee7bd837b1090430d52/AndroidManifest.xml:19:5-21:19
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/4214bb1fce540ee7bd837b1090430d52/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.2.aar/0226548448ac9cf10b96acd7f1574b8f/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/06a94dea7cf5bd69bd57b7e5fa07bb2f/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-location-11.0.2.aar/06a94dea7cf5bd69bd57b7e5fa07bb2f/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/43eda95b0799c500b49f0443a8fa9795/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/43eda95b0799c500b49f0443a8fa9795/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/b43af409fe56ace96f3c891d2de48ede/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.2.aar/b43af409fe56ace96f3c891d2de48ede/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/b8291e3089b0ed9604ca2ba9e2a8e318/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/b8291e3089b0ed9604ca2ba9e2a8e318/AndroidManifest.xml:19:5-21:19
 	android:label
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:39:9-41
-	android:debuggable
-		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:41:9-34
 	android:configChanges
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:37:9-68
 	android:icon
@@ -191,8 +201,8 @@ ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManife
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:44:13-62
 meta-data#com.google.android.gms.version
 ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:46:9-48:69
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/4214bb1fce540ee7bd837b1090430d52/AndroidManifest.xml:20:9-121
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/4214bb1fce540ee7bd837b1090430d52/AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/b8291e3089b0ed9604ca2ba9e2a8e318/AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.2.aar/b8291e3089b0ed9604ca2ba9e2a8e318/AndroidManifest.xml:20:9-121
 	android:value
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:48:13-66
 	android:name
@@ -221,11 +231,47 @@ ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManife
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:62:13-64
 	android:name
 		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:61:13-63
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/086c45fce2c6013127012f7aabad0548/AndroidManifest.xml:19:9-172
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/086c45fce2c6013127012f7aabad0548/AndroidManifest.xml:19:146-170
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/086c45fce2c6013127012f7aabad0548/AndroidManifest.xml:19:86-145
+service#droid.crowdmap.services.ColetaDadosService
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:65:9-70:19
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/086c45fce2c6013127012f7aabad0548/AndroidManifest.xml:19:19-85
+		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:65:18-75
+intent-filter#action:name:ColetaDados+category:name:android.intent.category.DEFAULT
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:66:13-69:29
+action#ColetaDados
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:67:17-61
+	android:name
+		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:67:25-51
+category#android.intent.category.DEFAULT
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:68:17-85
+	android:name
+		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:68:27-73
+service#droid.crowdmap.services.Iniciar
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:71:9-76:19
+	android:name
+		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:71:18-64
+intent-filter#action:name:Iniciar+category:name:android.intent.category.DEFAULT
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:72:13-75:29
+action#Iniciar
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:73:17-57
+	android:name
+		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:73:25-47
+receiver#droid.crowdmap.receivers.BootCompletoReceiver
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:78:9-84:20
+	android:permission
+		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:80:13-75
+	android:name
+		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:79:13-73
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:81:13-83:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:82:17-79
+	android:name
+		ADDED from /home/ton/dev/android/projects/CM/CrowdMap/app/src/main/AndroidManifest.xml:82:25-76
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/43eda95b0799c500b49f0443a8fa9795/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/43eda95b0799c500b49f0443a8fa9795/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/43eda95b0799c500b49f0443a8fa9795/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.2] /home/ton/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.2.aar/43eda95b0799c500b49f0443a8fa9795/AndroidManifest.xml:19:19-85

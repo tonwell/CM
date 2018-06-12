@@ -4,3 +4,9 @@ gradle
 .idea
 .settings
 local.properties
+CrowdMap/app/build
+CrowdMap/build
+CrowdMap/gradle
+CrowdMap/.gradle
+CrowdMap/.idea
+CrowdMap/.settings

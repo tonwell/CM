@@ -4,7 +4,7 @@
             "outputFile": "/home/ton/dev/android/projects/CM/CrowdMap/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/9e17b54ed1facc884c1a5faf7b0b4ab3/res/values-v24/values-v24.xml",
+                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/09c9de28ea77bba2a50a7c758bc31f60/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/bc9806ea98fdb5752c08c2f04bfab969/res/values-v24/values-v24.xml",
+                    "source": "/home/ton/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/a85ddd605a3c57f89222dd0aabfe303d/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

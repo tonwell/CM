@@ -14,7 +14,7 @@ public class AlarmeColeta {
 	private Intent coletarDados;
 	private PendingIntent pintent;
 	private AlarmManager alarm;
-	private static int MINUTO = 60 * 1000;
+	private static int MINUTO = 10 * 1000;
 
 	public AlarmeColeta(Context contexto) {
 		cal = Calendar.getInstance();

@@ -104,9 +104,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         */
 
-        mDrawerLayout = findViewById(R.id.settings_menu);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.settings_menu);
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -320,8 +320,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             String table = "zoom"+index;
             Dados d = dao.getOne(dp.getLatitude(), dp.getLongitude(), dp.getOperadora(), table);
 
-//            d.setLatitude(DrawAPI.getIdCoord(d.getLatitude(),scale));
-//            d.setLongitude(DrawAPI.getIdCoord(d.getLongitude(), scale));
+            d.setLatitude(DrawAPI.getIdCoord(d.getLatitude(),scale));
+            d.setLongitude(DrawAPI.getIdCoord(d.getLongitude(), scale));
 
             return d;
         }

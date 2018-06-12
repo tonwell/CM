@@ -3444,7 +3444,7 @@ public final class R {
     public static final int search_src_text=0x7f080092;
     public static final int search_voice_btn=0x7f080093;
     public static final int select_dialog_listview=0x7f080094;
-    public static final int settings_screen=0x7f080095;
+    public static final int settings_menu=0x7f080095;
     public static final int shortcut=0x7f080096;
     public static final int showCustom=0x7f080097;
     public static final int showHome=0x7f080098;
