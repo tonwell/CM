@@ -3,3 +3,4 @@ gradle
 .gradle
 .idea
 .settings
+local.properties
