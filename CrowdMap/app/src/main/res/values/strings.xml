@@ -19,5 +19,6 @@
     <string name="about">About</string>
     <string name="minutos">minuto(s)</string>
     <string name="API_KEY">AIzaSyCKzK7CugXZs4oX3PsD_KxfOKsLZPDtdw8</string>
+    <string name="PLACES_API_KEY">AIzaSyAyRT58rb8gvgYFfrRydu_LM6rg_Gz51nY</string>
     <string name="drawer_settings">Configurações</string>
 </resources>
