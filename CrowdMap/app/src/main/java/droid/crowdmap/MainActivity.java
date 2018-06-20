@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Camera;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
@@ -33,6 +34,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 import droid.crowdmap.basededados.DB;
@@ -53,6 +55,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private static final LatLng uff = new LatLng(-22.902907, -43.116714);
     private static final LatLng o = new LatLng(0, 0);
     private static final LatLng home = new LatLng(-22.619415, -43.725953);
+    int i;
     private double[] scales = {
             0.002,
             0.004,
@@ -115,7 +118,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 menuItem.setChecked(true);
-                mDrawerLayout.closeDrawers();
+                //mDrawerLayout.closeDrawers();
                 Intent it = new Intent(MainActivity.this, ConfiguracaoActivity.class);
                 startActivity(it);
                 return true;
@@ -150,8 +153,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
             @Override
             public void onPlaceSelected(Place place) {
-
-
+                LatLng placeLatLng = place.getLatLng();
+                gmap.addMarker(new MarkerOptions().position(placeLatLng));
+                gmap.animateCamera(CameraUpdateFactory.newLatLngZoom(placeLatLng, zooms[i]));
             }
 
             @Override
@@ -189,7 +193,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             public void onCameraIdle() {
                 gmap.clear();
                 float cameraPositionZoom = gmap.getCameraPosition().zoom;
-                int i;
+                //int i;
                 if(cameraPositionZoom > zooms[0]){
                     i = 0;
                 } else if(cameraPositionZoom > zooms[1]){

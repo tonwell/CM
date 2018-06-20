@@ -36,6 +36,7 @@ public class DrawAPI {
         fY = getIdCoord( fY , 0.002 );
 
         ArrayList<PolylineOptions> verticals = new ArrayList<PolylineOptions>();
+        y-=scale;
         while (y <= fY) {
             PolylineOptions po = new PolylineOptions();
           //po.add(new LatLng(iLat, y), new LatLng(fLat, y));
@@ -71,6 +72,7 @@ public class DrawAPI {
 
         ArrayList<PolylineOptions> horizontals = new ArrayList<PolylineOptions>();
 
+        x-=scale;
         while ( x <= fX ) {
             PolylineOptions po = new PolylineOptions();
           //po.add(new LatLng(x, iLng), new LatLng(x, fLng));

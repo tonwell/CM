@@ -20,8 +20,8 @@ public class ConfiguracaoActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		ActionBar actionBar = getActionBar();
-    actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME, ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_USE_LOGO);
+		// ActionBar actionBar = getActionBar();
+        // actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME, ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_USE_LOGO);
 		sp = getSharedPreferences("coleta", MODE_PRIVATE);
 		setContentView(R.layout.activity_configuracao);
         final EditText edtColeta = (EditText) findViewById(R.id.edt_coleta);
