@@ -17,7 +17,7 @@ public class BootCompletoReceiver extends BroadcastReceiver {
         SharedPreferences sp = arg0.getSharedPreferences("coleta", Context.MODE_PRIVATE);
 		Log.d("BootReceiver", "Iniciando");
 		AlarmeColeta alarme = new AlarmeColeta(arg0);
-		alarme.setMinutos(sp.getInt("minutos", 5));
+		alarme.setMinutos(sp.getInt("minutos", 10));
 		arg0.startService(new Intent(arg0, Iniciar.class));
 	}
 
