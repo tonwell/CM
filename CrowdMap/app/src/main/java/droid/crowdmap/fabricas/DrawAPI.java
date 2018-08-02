@@ -123,17 +123,17 @@ public class DrawAPI {
         polygonOptions.addAll(ls); // Adiciona os pontos para criação do polígono com map.addPolygon(polygonOptions);
         polygonOptions.strokeColor(Color.BLACK); // cor do traço
         polygonOptions.strokeWidth(0); // largura do traço
-        if(color!=-1) polygonOptions.fillColor(color);
+        if(color != -1) polygonOptions.fillColor(color);
         polygonOptions.geodesic(false);
 
         return polygonOptions;
     }
     // Gera o parte do id correspondente a dada coordenada seja latitude, seja longitude
     public static double getIdCoord(double val, double scale) {
-        double id;
+    double id;
 	double nScale = scale * trunc;
 	double nVal = val * trunc;
-        if (val >= 0) {
+	if (val >= 0) {
 		nVal = Math.floor( nVal );
         	id = ( nVal - ( nVal % nScale) ) / trunc;
 	} else {
