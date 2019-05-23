@@ -24,13 +24,12 @@ public class AlarmeColeta {
 	}
 
 	public void setMinutos(int minutos) {
-		alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
-				minutos * MINUTO, pintent);
-		Log.d("Alarme", "Service setado para "+minutos+" minuto(s)");
+		alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), minutos * MINUTO, pintent);
+		Log.d("CMAlarmeColeta", "Service setado para " + minutos + " minuto(s)");
 	}
 
 	public void desligarAlarme() {
 		alarm.cancel(pintent);
-		Log.d("Alarme", "Service encerrado");
+		Log.d("CMAlarmeColeta", "Service encerrado");
 	}
 }

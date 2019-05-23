@@ -16,40 +16,25 @@ public class DB {
 
     private SQLiteDatabase db;
     private static DB obj = null;
-    private final String[] tables = {
-            "zoom0",
-            "zoom1",
-            "zoom2",
-            "zoom3",
-            "zoom4",
-            "zoom5",
-            "zoom6",
-            "zoom7",
-            "zoom8",
-            "zoom9",
-            "zoom10",
-            "zoom11",
-            "zoom12",
-            "zoom13",
-            "zoom14",
-            "zoom15"
-    };
-    private final String[] attr = {"_id", "lat", "lng", "signal", "operadora"};
-    private DB(Context context){
+    private final String[] tables = { "zoom0", "zoom1", "zoom2", "zoom3", "zoom4", "zoom5", "zoom6", "zoom7", "zoom8",
+            "zoom9", "zoom10", "zoom11", "zoom12", "zoom13", "zoom14", "zoom15" };
+    private final String[] attr = { "_id", "lat", "lng", "signal", "operadora" };
+
+    private DB(Context context) {
         DBCore auxDB = new DBCore(context);
         db = auxDB.getWritableDatabase();
     }
 
-    public static DB getInstance(Context context){
-        if(obj==null){
+    public static DB getInstance(Context context) {
+        if (obj == null) {
             obj = new DB(context);
         }
         return obj;
     }
 
-    public void insert(Dados d){
+    public void insert(Dados d) {
         Dados old = getOne(d.getLatitude(), d.getLongitude(), d.getOperadora());
-        if(old.getSinal() == 99) {
+        if (old.getSinal() == 99) {
             ContentValues val = new ContentValues();
             val.put("lat", d.getLatitude());
             val.put("lng", d.getLongitude());
@@ -59,12 +44,13 @@ public class DB {
         } else {
             update(d);
         }
-        Log.d("Script", "BD => lat:"+d.getLatitude()+",lng:"+d.getLongitude()+",signal:"+d.getSinal()+",op:"+d.getOperadora());
+        Log.d("CMDB", "BD => lat:" + d.getLatitude() + ",lng:" + d.getLongitude() + ",signal:" + d.getSinal() + ",op:"
+                + d.getOperadora());
     }
 
-    public void insert(Dados d, String table){
+    public void insert(Dados d, String table) {
         Dados old = getOne(d.getLatitude(), d.getLongitude(), d.getOperadora(), table);
-        if(old.getSinal() == 99) {
+        if (old.getSinal() == 99) {
             ContentValues val = new ContentValues();
             val.put("lat", d.getLatitude());
             val.put("lng", d.getLongitude());
@@ -74,39 +60,44 @@ public class DB {
         } else {
             update(d, table);
         }
-        Log.d("Script", "BD => lat:"+d.getLatitude()+",lng:"+d.getLongitude()+",signal:"+d.getSinal()+",op:"+d.getOperadora());
+        Log.d("CMDB", "BD => lat:" + d.getLatitude() + ",lng:" + d.getLongitude() + ",signal:" + d.getSinal() + ",op:"
+                + d.getOperadora());
     }
 
-    public void update(Dados d){
+    public void update(Dados d) {
         ContentValues val = new ContentValues();
         Dados old = getOne(d.getLatitude(), d.getLongitude(), d.getOperadora());
-        if(old.getSinal() != 99 && d.getSinal() != 99) {
+        if (old.getSinal() != 99 && d.getSinal() != 99) {
             val.put("signal", expMovAvg(old.getSinal(), d.getSinal()));
-            db.update(tables[0], val, "lat = ? and lng = ? and operadora = ?", new String[]{"" + d.getLatitude(), "" + d.getLongitude(), ""+d.getOperadora()});
-        }
-    }
-    public void update(Dados d, String table){
-        ContentValues val = new ContentValues();
-        Dados old = getOne(d.getLatitude(), d.getLongitude(), d.getOperadora());
-        if(old.getSinal() != 99 && d.getSinal() != 99) {
-            val.put("signal", expMovAvg(old.getSinal(), d.getSinal()));
-            db.update(table, val, "lat = ? and lng = ? and operadora = ?", new String[]{"" + d.getLatitude(), "" + d.getLongitude(), ""+d.getOperadora()});
+            db.update(tables[0], val, "lat = ? and lng = ? and operadora = ?",
+                    new String[] { "" + d.getLatitude(), "" + d.getLongitude(), "" + d.getOperadora() });
         }
     }
 
-
-    public void delete(Dados d){
-        db.delete(tables[0], "lat = ? and lng = ? and operadora = ?", new String[]{""+d.getLatitude(), ""+ d.getLongitude(), ""+d.getOperadora()});
+    public void update(Dados d, String table) {
+        ContentValues val = new ContentValues();
+        Dados old = getOne(d.getLatitude(), d.getLongitude(), d.getOperadora());
+        if (old.getSinal() != 99 && d.getSinal() != 99) {
+            val.put("signal", expMovAvg(old.getSinal(), d.getSinal()));
+            db.update(table, val, "lat = ? and lng = ? and operadora = ?",
+                    new String[] { "" + d.getLatitude(), "" + d.getLongitude(), "" + d.getOperadora() });
+        }
     }
 
-    public void delete(Dados d, String table){
-        db.delete(table, "lat = ? and lng = ? and operadora = ?", new String[]{""+d.getLatitude(), ""+ d.getLongitude(), ""+d.getOperadora()});
+    public void delete(Dados d) {
+        db.delete(tables[0], "lat = ? and lng = ? and operadora = ?",
+                new String[] { "" + d.getLatitude(), "" + d.getLongitude(), "" + d.getOperadora() });
     }
 
-    public List<Dados> getAll(){
+    public void delete(Dados d, String table) {
+        db.delete(table, "lat = ? and lng = ? and operadora = ?",
+                new String[] { "" + d.getLatitude(), "" + d.getLongitude(), "" + d.getOperadora() });
+    }
+
+    public List<Dados> getAll() {
         List<Dados> list = new ArrayList<Dados>();
-        Cursor cursor = db.query(tables[0],attr,null,null,null,null,null);
-        if(cursor.getCount()>0){
+        Cursor cursor = db.query(tables[0], attr, null, null, null, null, null);
+        if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
                 Dados d = new Dados();
@@ -116,15 +107,16 @@ public class DB {
                 d.setSinal(cursor.getInt(3));
                 d.setOperadora(cursor.getString(4));
                 list.add(d);
-            }while(cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
         return list;
     }
 
-    public Dados getOne(double lat, double lng, String op){
+    public Dados getOne(double lat, double lng, String op) {
         Dados d = null;
-        Cursor cursor = db.query(tables[0],attr,"lat = ? and lng = ? and operadora = ?", new String[]{""+lat, ""+lng, ""+op},null, null, null);
-        if(cursor.getCount()>0){
+        Cursor cursor = db.query(tables[0], attr, "lat = ? and lng = ? and operadora = ?",
+                new String[] { "" + lat, "" + lng, "" + op }, null, null, null);
+        if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             d = new Dados();
             d.setId(cursor.getLong(0));
@@ -133,7 +125,7 @@ public class DB {
             d.setSinal(cursor.getInt(3));
             d.setOperadora(cursor.getString(4));
         }
-        if(d == null){
+        if (d == null) {
             d = new Dados();
             d.setLatitude(lat);
             d.setLongitude(lng);
@@ -143,10 +135,11 @@ public class DB {
         return d;
     }
 
-    public Dados getOne(double lat, double lng, String op, String table){
+    public Dados getOne(double lat, double lng, String op, String table) {
         Dados d = null;
-        Cursor cursor = db.query(table, attr,"lat = ? and lng = ? and operadora = ?", new String[]{""+lat, ""+lng, ""+op},null, null, null);
-        if(cursor.getCount()>0){
+        Cursor cursor = db.query(table, attr, "lat = ? and lng = ? and operadora = ?",
+                new String[] { "" + lat, "" + lng, "" + op }, null, null, null);
+        if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             d = new Dados();
             d.setId(cursor.getLong(0));
@@ -155,7 +148,7 @@ public class DB {
             d.setSinal(cursor.getInt(3));
             d.setOperadora(cursor.getString(4));
         }
-        if(d == null){
+        if (d == null) {
             d = new Dados();
             d.setLatitude(lat);
             d.setLongitude(lng);
@@ -165,10 +158,11 @@ public class DB {
         return d;
     }
 
-    public Dados getBest(double lat, double lng, String[] op, String table){
+    public Dados getBest(double lat, double lng, String[] op, String table) {
         Dados d = null;
-        Cursor cursor = db.query(table, attr,"lat = ? and lng = ? and operadora = ?", new String[]{""+lat, ""+lng, ""+op[0]},null, null, null);
-        if(cursor.getCount()>0){
+        Cursor cursor = db.query(table, attr, "lat = ? and lng = ? and operadora = ?",
+                new String[] { "" + lat, "" + lng, "" + op[0] }, null, null, null);
+        if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             d = new Dados();
             d.setId(cursor.getLong(0));
@@ -177,7 +171,7 @@ public class DB {
             d.setSinal(cursor.getInt(3));
             d.setOperadora(cursor.getString(4));
         }
-        if(d == null){
+        if (d == null) {
             d = new Dados();
             d.setLatitude(lat);
             d.setLongitude(lng);
@@ -187,8 +181,8 @@ public class DB {
         return d;
     }
 
-    public double expMovAvg(double oldValue, double newValue){
+    public double expMovAvg(double oldValue, double newValue) {
         double alpha = 0.5;
-        return oldValue * alpha + newValue * ( 1 - alpha );
+        return oldValue * alpha + newValue * (1 - alpha);
     }
 }

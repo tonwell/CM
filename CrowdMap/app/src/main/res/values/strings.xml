@@ -11,9 +11,9 @@
     <string name="desc_sqlite">Reserva espaço para armazenamento dos seus dados</string>
     <string name="cache">Limpeza de cache: </string>
     <string name="desc_cache" formatted="false">Quando o tamanho do banco de registros atingir 100% do espaço reservado para armazenamento (item acima), será executada uma limpeza nesse banco, apagando X% (X definido pela barra) dos registros, sendo esses os menos relevantes</string>
-    <string name="labtempo">LabTempo</string>
-    <string name="ic_uff">Instituto de Computação</string>
-    <string name="uff">UFF</string>
+    <string name="labtempo"><a href="https://www.facebook.com/labtempo/">LabTempo</a></string>
+    <string name="ic_uff"><a href="http://www.ic.uff.br/">Instituto de Computação</a></string>
+    <string name="uff"><a href="http://www.uff.br/">UFF</a></string>
     <string name="about_crowdmap">CrowdMap - Copyright</string>
     <string name="btn_config">Ver Mapa</string>
     <string name="about">About</string>

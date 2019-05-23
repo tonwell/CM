@@ -69,7 +69,7 @@
     <TextView
         style="@style/UserInputText.About"
         android:text="@string/about"/>
-    <View style="@style/CustomLine" />
+    <View style="@style/CustomLine" android:id="@+id/view_labtempo"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -79,9 +79,10 @@
             android:src="@drawable/labtempo"/>
         <TextView
             style="@style/UserInputText.ListTxt"
+            android:id="@+id/tv_labtempo"
             android:text="@string/labtempo" />
     </LinearLayout>
-    <View style="@style/CustomLine" />
+    <View style="@style/CustomLine" android:id="@+id/view_icuff"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -90,10 +91,11 @@
             style="@style/ListImg"
             android:src="@drawable/ic_uff"/>
         <TextView
+            android:id="@+id/tv_icuff"
             style="@style/UserInputText.ListTxt"
             android:text="@string/ic_uff" />
     </LinearLayout>
-    <View style="@style/CustomLine" />
+    <View style="@style/CustomLine" android:id="@+id/view_uff" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -102,6 +104,7 @@
             style="@style/ListImg"
             android:src="@drawable/uff"/>
         <TextView
+            android:id="@+id/tv_uff"
             style="@style/UserInputText.ListTxt"
             android:text="@string/uff" />
     </LinearLayout>
