@@ -53,28 +53,23 @@ public class ColetaDadosService extends IntentService
 
     @Override
     public void onCreate() {
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            stopSelf();
+        }
+
         createLocationRequest();
         mGoogleApiClient = new GoogleApiClient.Builder(this).addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this).addApi(LocationServices.API).build();
         mGoogleApiClient.connect();
 
         mTelephonyManager = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
-        mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
+
+        if(mTelephonyManager != null && mPhoneStateListener != null) mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(this,
-                        Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            // ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            // public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            // int[] grantResults)
-            // to handle the case where the user grants the permission. See the
-            // documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
+
         mLastLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
         mPhoneStateListener = new PhoneStateListener() {
@@ -97,15 +92,7 @@ public class ColetaDadosService extends IntentService
                 Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this,
                         Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            // ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            // public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            // int[] grantResults)
-            // to handle the case where the user grants the permission. See the
-            // documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
+           stopSelf();
         }
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
         if (mLastLocation != null) {
@@ -120,15 +107,7 @@ public class ColetaDadosService extends IntentService
                 Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this,
                         Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            // ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            // public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            // int[] grantResults)
-            // to handle the case where the user grants the permission. See the
-            // documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
+            stopSelf();
         }
         LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
     }
@@ -155,29 +134,11 @@ public class ColetaDadosService extends IntentService
         Log.d("CMColetaDadosService", "Service iniciado");
         turnGPSOn();
         mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
-        // locationManager = (LocationManager)
-        // this.getSystemService(Context.LOCATION_SERVICE);
         Dados dados = recuperarDados();
 
         Log.i("CMColetaDadosService", "on start sinal " + sinal);
         if (dados != null) {
             dados.setSinal(sinal);
-            /*
-             * // NotificationManager nm = (NotificationManager)
-             * getSystemService(NOTIFICATION_SERVICE); NotificationCompat.Builder builder =
-             * new NotificationCompat.Builder(this); builder.setTicker(dados.getLatitude() +
-             * "|" + dados.getLongitude() + ">" + dados.getSinal());
-             * builder.setContentTitle(dados.getLatitude() + "|" + dados.getLongitude() +
-             * ">" + dados.getSinal()); builder.setContentText("");
-             * builder.setSmallIcon(R.drawable.ic_launcher); Notification n =
-             * builder.build(); n.flags = Notification.FLAG_AUTO_CANCEL;
-             * nm.notify(R.drawable.ic_launcher, n);
-             * 
-             * try { Uri som =
-             * RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION); Ringtone
-             * toque = RingtoneManager.getRingtone(this, som); toque.play(); } catch
-             * (Exception e) { } //
-             */
             Dados d = db.getOne(dados.getLatitude(), dados.getLongitude(), dados.getOperadora());
             d.setSinal(sinal);
             db.insert(d);
@@ -196,7 +157,6 @@ public class ColetaDadosService extends IntentService
     public void onDestroy() {
         Log.d("CMColetaDadosService", "Encerrando o Service");
         mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
-        // locationManager.removeUpdates(this);
         LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
         mGoogleApiClient = null;
         turnGPSOff();
@@ -205,14 +165,6 @@ public class ColetaDadosService extends IntentService
 
     private Dados recuperarDados() {
         Dados dados = null;
-        /*
-         * if (mLastLocation == null){ if
-         * (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-         * locationManager.requestLocationUpdates( LocationManager.GPS_PROVIDER, 0, 0,
-         * this); } else { locationManager.requestLocationUpdates(
-         * LocationManager.NETWORK_PROVIDER, 0, 0, this); } mLastLocation =
-         * locationManager.getLastKnownLocation(); }
-         */
         if (mLastLocation != null) {
             latitude = mLastLocation.getLatitude();
             longitude = mLastLocation.getLongitude();
@@ -233,7 +185,6 @@ public class ColetaDadosService extends IntentService
         longitude = location.getLongitude();
     }
 
-    /** Method to turn on GPS **/
     public void turnGPSOn() {
         try {
             String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_MODE);
@@ -249,7 +200,6 @@ public class ColetaDadosService extends IntentService
         }
     }
 
-    // Method to turn off the GPS
     public void turnGPSOff() {
         try {
             String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_MODE);

@@ -14,10 +14,20 @@ import java.util.ArrayList;
 public class DrawAPI {
 
     private static final double trunc = 100000;
+    public static LatLng top_right;
+    public static LatLng bottom_left;
+
+    public static LatLng getTopRightCorner(GoogleMap map) {
+        return FabricaExtremosMapa.nordeste(map);
+    }
+
+    public static LatLng getBottomLeftCorner(GoogleMap map) {
+        return FabricaExtremosMapa.sudoeste(map);
+    }
 
     public static ArrayList<PolylineOptions> drawLinesY(GoogleMap map, double scale) {
-        LatLng top_right = FabricaExtremosMapa.nordeste(map);
-        LatLng bottom_left = FabricaExtremosMapa.sudoeste(map);
+        LatLng top_right = getTopRightCorner(map);
+        LatLng bottom_left = getBottomLeftCorner(map);
 
         double iLat = Math.floor(bottom_left.latitude * trunc) / trunc;
         double iLng = Math.floor(bottom_left.longitude * trunc) / trunc;
