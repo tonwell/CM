@@ -10,6 +10,8 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
@@ -22,9 +24,15 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 
+import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+
+import org.jetbrains.annotations.NotNull;
 
 import droid.crowdmap.basededados.DB;
 import droid.crowdmap.basededados.Dados;
@@ -32,16 +40,16 @@ import droid.crowdmap.fabricas.DrawAPI;
 import droid.crowdmap.modelos.Operadora;
 
 public class ColetaDadosService extends IntentService
-        implements ConnectionCallbacks, OnConnectionFailedListener, LocationListener {
+        implements LocationListener {
     DB db;
     double latitude, longitude;
     int sinal;
     LocationManager locationManager;
     private TelephonyManager mTelephonyManager;
     private PhoneStateListener mPhoneStateListener;
-    private GoogleApiClient mGoogleApiClient;
     private Location mLastLocation;
     private LocationRequest mLocationRequest;
+    private LocationCallback mLocationCallback;
     private static final long INTERVAL = 1000 * 10;
     private static final long FASTEST_INTERVAL = 1000 * 5;
 
@@ -61,9 +69,6 @@ public class ColetaDadosService extends IntentService
         }
 
         createLocationRequest();
-        mGoogleApiClient = new GoogleApiClient.Builder(this).addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this).addApi(LocationServices.API).build();
-        mGoogleApiClient.connect();
 
         mTelephonyManager = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
 
@@ -86,51 +91,50 @@ public class ColetaDadosService extends IntentService
         super.onCreate();
     }
 
-    @Override
-    public void onConnected(Bundle connectionHint) {
+    private void setupLocationCallback() {
+        mLocationCallback = new LocationCallback(){
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                super.onLocationResult(locationResult);
+                if(locationResult != null)
+                    locationResult.getLastLocation();
+                else
+                    Log.e("LOCATION_SERVICE_ERROR", "Error location callback is null");
+            }
+        };
+    }
+
+    //onConnected()
+    public void onConnected() {
         if (ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(this,
-                        Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
            stopSelf();
         }
-        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if (mLastLocation != null) {
-            latitude = mLastLocation.getLatitude();
-            longitude = mLastLocation.getLongitude();
-        }
+        LocationServices.getFusedLocationProviderClient(this).getLastLocation().addOnCompleteListener(task -> {
+           if(task.getResult() != null) {
+               latitude = task.getResult().getLatitude();
+               longitude = task.getResult().getLongitude();
+           }
+        });
         startLocationUpdates();
     }
 
     protected void startLocationUpdates() {
         if (ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(this,
-                        Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             stopSelf();
         }
-        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
-    }
-
-    @Override
-    public void onConnectionFailed(ConnectionResult result) {
-
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-
+        LocationServices.getFusedLocationProviderClient(this).requestLocationUpdates(mLocationRequest, mLocationCallback, null);
     }
 
     protected void createLocationRequest() {
-        mLocationRequest = new LocationRequest();
+        mLocationRequest = LocationRequest.create();
         mLocationRequest.setInterval(INTERVAL);
         mLocationRequest.setFastestInterval(FASTEST_INTERVAL);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
     }
 
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
+    private void setupData() {
         Log.d("CMColetaDadosService", "Service iniciado");
         turnGPSOn();
         mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
@@ -145,6 +149,13 @@ public class ColetaDadosService extends IntentService
             for (int i = 1; i <= 15; i++)
                 db.insert(d, "zoom" + i);
         }
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        onConnected();
+        setupLocationCallback();
+        setupData();
         return START_REDELIVER_INTENT;
     }
 
@@ -157,8 +168,7 @@ public class ColetaDadosService extends IntentService
     public void onDestroy() {
         Log.d("CMColetaDadosService", "Encerrando o Service");
         mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
-        LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
-        mGoogleApiClient = null;
+        LocationServices.getFusedLocationProviderClient(this).removeLocationUpdates(mLocationCallback);
         turnGPSOff();
         super.onDestroy();
     }

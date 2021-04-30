@@ -10,11 +10,14 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+<!--    <uses-permission android:name="android.hardware.gps" />-->
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -65,26 +68,31 @@
             android:label="@string/title_activity_configuracao" >
         </activity>
 
-        <service android:name="droid.crowdmap.services.ColetaDadosService" >
-            <intent-filter>
-                <action android:name="ColetaDados"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-            </intent-filter>
-        </service>
-        <service android:name="droid.crowdmap.services.Iniciar" >
-            <intent-filter>
-                <action android:name="Iniciar"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-            </intent-filter>
-        </service>
+<!--        <service android:name="droid.crowdmap.services.ColetaDadosService" >-->
+<!--            <intent-filter>-->
+<!--                <action android:name="ColetaDados"></action>-->
+<!--                <category android:name="android.intent.category.DEFAULT"></category>-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+<!--        <service android:name="droid.crowdmap.services.Iniciar" >-->
+<!--            <intent-filter>-->
+<!--                <action android:name="Iniciar"></action>-->
+<!--                <category android:name="android.intent.category.DEFAULT"></category>-->
+<!--            </intent-filter>-->
+<!--        </service>-->
 
-        <receiver
-            android:name="droid.crowdmap.receivers.BootCompletoReceiver"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
+<!--        <receiver-->
+<!--            android:name="droid.crowdmap.receivers.BootCompletoReceiver"-->
+<!--            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+        <service
+            android:name=".services.ForegroundOnlyLocationService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
     </application>
 
 </manifest>

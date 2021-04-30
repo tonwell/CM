@@ -5,13 +5,13 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [PhoneData::class], version = 1)
+const val DB_NAME = "crowdmap_database"
+
+@Database(entities = [PhoneDataEntity::class], version = 1)
 abstract class CrowdMapDatabase: RoomDatabase() {
     abstract fun phoneDataDao(): PhoneDataDao
 
     companion object {
-        // Singleton prevents multiple instances of database opening at the
-        // same time.
         @Volatile
         private var INSTANCE: CrowdMapDatabase? = null
 
@@ -24,7 +24,7 @@ abstract class CrowdMapDatabase: RoomDatabase() {
                 val instance = Room.databaseBuilder(
                         context.applicationContext,
                         CrowdMapDatabase::class.java,
-                        "word_database"
+                        DB_NAME
                 ).build()
                 INSTANCE = instance
                 return instance

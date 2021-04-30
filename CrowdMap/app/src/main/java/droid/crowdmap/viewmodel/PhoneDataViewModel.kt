@@ -1,16 +1,29 @@
 package droid.crowdmap.viewmodel
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.location.Location
+import android.os.Bundle
 import androidx.lifecycle.*
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.api.GoogleApiClient
+import com.google.android.gms.common.api.ResolvableApiException
+import com.google.android.gms.location.*
 import com.google.android.gms.maps.model.LatLng
-import droid.crowdmap.basededados.PhoneData
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
+import droid.crowdmap.basededados.PhoneDataEntity
+import droid.crowdmap.modelos.PhoneData
 import droid.crowdmap.repository.PhoneDataRepository
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
+import kotlinx.coroutines.*
+import java.lang.Exception
 import kotlin.coroutines.CoroutineContext
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
+import kotlin.coroutines.suspendCoroutine
 
-class PhoneDataViewModel(context: Context) : ViewModel(), CoroutineScope {
+class PhoneDataViewModel(val context: Context) : ViewModel(), CoroutineScope {
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main + viewModelJob
     private val viewModelJob = Job()
@@ -19,11 +32,56 @@ class PhoneDataViewModel(context: Context) : ViewModel(), CoroutineScope {
         PhoneDataRepository(context)
     }
 
-    private val _phoneData: MutableLiveData<List<PhoneData>> = MutableLiveData()
-    val phoneDataLiveData: LiveData<List<PhoneData>> get() = _phoneData
+    private val locationClient: FusedLocationProviderClient by lazy {
+        LocationServices.getFusedLocationProviderClient(context.applicationContext)
+    }
+
+    private val _currentLocationError = MutableLiveData<LocationError>()
+    val currentLocationError: LiveData<LocationError>
+        get() = _currentLocationError
+
+    private val _mapState = MutableLiveData<MapState>().apply { value = MapState() }
+    val mapState: LiveData<MapState>
+        get() = _mapState
+
+    private val _phoneData: MutableLiveData<List<PhoneDataEntity>> = MutableLiveData()
+    val phoneDataLiveData: LiveData<List<PhoneDataEntity>> get() = _phoneData
 
     fun getVisiblePhoneData(firstCoord: LatLng, lastCoord: LatLng, networkOperator: String): LiveData<List<PhoneData>> {
         return phoneDataRepo.getVisiblePhoneDatas(firstCoord, lastCoord, networkOperator)
+    }
+
+    @SuppressLint("MissingPermission")
+    private suspend fun loadLastLocation(): Boolean = suspendCoroutine { continuation ->
+        locationClient.lastLocation.addOnCompleteListener { task ->
+            val location = task.result
+            if (location != null) {
+                _mapState.value = _mapState.value?.copy(origin = LatLng(location.latitude, location.longitude))
+                continuation.resume(true)
+            } else {
+                _currentLocationError.value = LocationError.ErrorLocationUnavailable
+                continuation.resume(false)
+            }
+        }
+    }
+
+    fun requestLocation() {
+        launch {
+            _currentLocationError.value = try {
+                val success = withContext(Dispatchers.Default) { loadLastLocation() }
+                if(success)
+                    null
+                else
+                    LocationError.ErrorLocationUnavailable
+            } catch (e: Exception) {
+                LocationError.ErrorLocationUnavailable
+            }
+        }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelJob.cancel()
     }
 }
 
@@ -34,4 +92,13 @@ class PhoneDataViewModelFactory(private val context: Context) : ViewModelProvide
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
+}
+
+data class MapState(
+        val origin: LatLng? = null
+)
+
+
+sealed class LocationError {
+    object ErrorLocationUnavailable : LocationError()
 }

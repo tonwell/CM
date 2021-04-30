@@ -16,8 +16,8 @@
             android:layout_height="wrap_content" />
 
         <fragment
-            class="com.google.android.gms.maps.SupportMapFragment"
-            android:id="@+id/map"
+            class="droid.crowdmap.CrowdMapFragment"
+            android:id="@+id/crowd_map"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

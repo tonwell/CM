@@ -10,15 +10,14 @@ import android.util.Log;
 
 public class AlarmeColeta {
 
-	private Calendar cal;
-	private Intent coletarDados;
-	private PendingIntent pintent;
-	private AlarmManager alarm;
-	private static int MINUTO = 10 * 1000;
+	private final Calendar cal;
+	private final PendingIntent pintent;
+	private final AlarmManager alarm;
+	private static final int MINUTO = 10 * 1000;
 
 	public AlarmeColeta(Context contexto) {
 		cal = Calendar.getInstance();
-		coletarDados = new Intent(contexto, ColetaDadosService.class);
+		Intent coletarDados = new Intent(contexto, ColetaDadosService.class);
 		pintent = PendingIntent.getService(contexto, 0, coletarDados, 0);
 		alarm = (AlarmManager) contexto.getSystemService(Context.ALARM_SERVICE);
 	}
