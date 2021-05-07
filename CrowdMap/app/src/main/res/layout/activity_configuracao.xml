@@ -9,62 +9,27 @@
     android:layout_margin="5dp"
     android:orientation="vertical"
     android:scrollbars="vertical" >
-    <TextView
-        android:id="@+id/txt_coleta"
-        style="@style/UserInputText"
-        android:text="@string/tempo_coleta" />
+
     <TextView
         android:id="@+id/desc_coleta"
         style="@style/UserInputText.Desc"
         android:text="@string/desc_coleta"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <EditText
-            android:id="@+id/edt_coleta"
-            style="@style/EdtCfg" />
-        <TextView
-            style="@style/UserInputText.EdtLbl"
-            android:text="@string/minutos"/>
-    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/txt_sqlite"
-            style="@style/UserInputText"
-            android:text="@string/sqlite" />
+
         <TextView
             android:id="@+id/desc_sqlite"
             style="@style/UserInputText.Desc"
             android:text="@string/desc_sqlite"/>
-        <SeekBar
-            android:id="@+id/sb_sqlite"
-            style="@style/SBar" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/txt_cache"
-            style="@style/UserInputText"
-            android:text="@string/cache" />
-        <TextView
-            android:id="@+id/desc_cache"
-            style="@style/UserInputText.Desc"
-            android:text="@string/desc_cache"/>
-        <SeekBar
-            android:id="@+id/sb_cache"
-            style="@style/SBar"
-            android:max="100"/>
     </LinearLayout>
-    <Button
-        android:id="@+id/btn_apply"
-        style="@style/ButtonCfg"
-        android:text="@string/btn_config"/>
     <!-- About -->
     <TextView
         style="@style/UserInputText.About"

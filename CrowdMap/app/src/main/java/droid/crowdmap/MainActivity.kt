@@ -53,19 +53,7 @@ class MainActivity : FragmentActivity(), EasyPermissions.PermissionCallbacks {
 
     private var isGpsDialogOpened: Boolean = false
 
-//    private var gmap: GoogleMap? = null
-//    private var myLocation: LatLng? = null
-    private var operadora: Operadora? = null
     private var mDrawerLayout: DrawerLayout? = null
-    var i = 0
-    private val scales = doubleArrayOf(0.002, 0.004, 0.008, 0.016, 0.032, 0.064, 0.128, 0.256, 0.512, 1.024, 2.048, 4.096,
-            8.192, 16.384, 32.768, 65.536)
-    private val zooms = floatArrayOf(15.879104f, 14.905452f, 13.954487f, 12.933992f, 11.941226f, 10.953466f, 9.950232f,
-            8.912568f, 7.995446f, 6.920520f, 5.936304f, 4.992997f, 3.915645f, 2.968640f, 2.000000f, 2.000000f)
-    private var quads: List<LatLng>? = null
-    private var horizontals: ArrayList<PolylineOptions>? = null
-    private var verticals: ArrayList<PolylineOptions>? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,27 +74,12 @@ class MainActivity : FragmentActivity(), EasyPermissions.PermissionCallbacks {
             startActivity(it)
             true
         }
-        /*
-        quads = ArrayList()
-
-        if (ActivityCompat.checkSelfPermission(
-                        this,
-                        Manifest.permission.READ_PHONE_STATE
-                ) == PackageManager.PERMISSION_GRANTED) {
-
-            horizontals = ArrayList()
-            verticals = ArrayList()
-            operadora = Operadora(this)
-            fragment.getMapAsync(fragment)
-        }
-
 
         PhoneDataWorker.setupSelf(
                 applicationContext,
                 getSharedPreferences("coleta", MODE_PRIVATE)
                         .getLong("minutos", 20L)
         )
-        */
     }
 
     private fun requestPermissions() {
@@ -153,9 +126,7 @@ class MainActivity : FragmentActivity(), EasyPermissions.PermissionCallbacks {
 
     override fun onStart() {
         super.onStart()
-        fragment.getMapAsync {
-            initUi()
-        }
+        initUi()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -170,19 +141,6 @@ class MainActivity : FragmentActivity(), EasyPermissions.PermissionCallbacks {
             }
         }
     }
-
-//    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//        if (requestCode == REQUEST_PERMISSIONS && permissions.isNotEmpty()) {
-//            if (permissions.find { it == Manifest.permission.ACCESS_FINE_LOCATION } != null
-//                    && grantResults.firstOrNull() == PackageManager.PERMISSION_GRANTED) {
-//                loadLastLocation()
-//            } else {
-//                showError(ERROR_PERMISSION_RESULT)
-//                finish()
-//            }
-//        }
-//    }
 
     private fun initUi() {
         loadLastLocation()
@@ -222,113 +180,6 @@ class MainActivity : FragmentActivity(), EasyPermissions.PermissionCallbacks {
         Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
     }
 
-    private fun showPlayServicesErrorMessage(errorCode: Int) {
-        GoogleApiAvailability.getInstance().getErrorDialog(this, errorCode, REQUEST_ERROR_PLAY_SERVICES).show()
-    }
-
-    /*
-    override fun onMapReady(mapa: GoogleMap) {
-        gmap = mapa
-        gmap?.mapType = GoogleMap.MAP_TYPE_NORMAL
-        getCurrentLocation()
-
-        gmap?.setOnCameraIdleListener {
-            gmap?.clear()
-            gmap?.cameraPosition?.zoom?.let { cameraPositionZoom ->
-                i = setupZoomScaleIndex(cameraPositionZoom)
-            }
-            horizontals = DrawAPI.drawLinesX(gmap, scales[i])
-            verticals = DrawAPI.drawLinesY(gmap, scales[i])
-            handleDrawLines(horizontals)
-            handleDrawLines(verticals)
-
-            val latLngs: MutableList<LatLng> = mutableListOf()
-            horizontals?.forEach { x ->
-                verticals?.forEach { y ->
-                    latLngs.add(LatLng(x.points[0].latitude, y.points[0].longitude))
-                }
-            }
-
-            val firstCoord = latLngs.first()
-            val lastCoord = latLngs.last()
-
-            phoneDataViewModel.getVisiblePhoneData(firstCoord, lastCoord, "claro").observe(this) { phoneDatas ->
-                phoneDatas.map {
-                    fillQuads(it, 0.002)
-                }
-            }
-        }
-    }
-
-    private fun setupZoomScaleIndex(cameraPositionZoom: Float): Int {
-        return when {
-            cameraPositionZoom > zooms[0] -> {
-                0
-            }
-            cameraPositionZoom > zooms[1] -> {
-                1
-            }
-            cameraPositionZoom > zooms[2] -> {
-                2
-            }
-            cameraPositionZoom > zooms[3] -> {
-                3
-            }
-            cameraPositionZoom > zooms[4] -> {
-                4
-            }
-            cameraPositionZoom > zooms[5] -> {
-                5
-            }
-            cameraPositionZoom > zooms[6] -> {
-                6
-            }
-            cameraPositionZoom > zooms[7] -> {
-                7
-            }
-            cameraPositionZoom > zooms[8] -> {
-                8
-            }
-            cameraPositionZoom > zooms[9] -> {
-                9
-            }
-            cameraPositionZoom > zooms[10] -> {
-                10
-            }
-            cameraPositionZoom > zooms[11] -> {
-                11
-            }
-            cameraPositionZoom > zooms[12] -> {
-                12
-            }
-            cameraPositionZoom > zooms[13] -> {
-                13
-            }
-            cameraPositionZoom > zooms[14] -> {
-                14
-            }
-            else -> {
-                15
-            }
-        }
-    }
-
-    private fun handleDrawLines(po: ArrayList<PolylineOptions>?) {
-        for (ln in po!!) {
-            if (ln.isVisible) {
-                gmap!!.addPolyline(ln)
-            }
-        }
-    }
-
-    private fun fillQuads(d: PhoneData, scale: Double) {
-        val quad = LatLng(DrawAPI.getIdCoord(d.latitude, scale),
-                DrawAPI.getIdCoord(d.longitude, scale))
-        gmap!!.addPolygon(DrawAPI.fillQuad(quad, scale, d.signalStrength))
-        Log.i("CMMainActivity", "QUAD ::lat: " + quad.latitude + ", lng: " + quad.longitude)
-        Log.i("CMMainActivity", "DadosQuad :: lat: " + d.latitude + ", lng: " + d.longitude)
-    }
-    */
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)
@@ -346,13 +197,10 @@ class MainActivity : FragmentActivity(), EasyPermissions.PermissionCallbacks {
     }
 
     companion object {
-        private const val REQUEST_ERROR_PLAY_SERVICES = 1
         private const val REQUEST_PERMISSIONS = 2
         private const val REQUEST_CHECK_GPS = 3
         private const val ERROR_CURRENT_LOCATION = "Current Location Error"
-        private const val ERROR_PERMISSION_RESULT = "Permission Result Error"
         private const val ERROR_GPS_DISABLED = "GPS Disabled Error"
-        private const val ERROR_GPS_SETTINGS = "GPS Settings Unavailable Error"
         private const val EXTRA_GPS_DIALOG = "gpsDialogIsOpen"
     }
 }

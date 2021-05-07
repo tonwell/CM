@@ -23,20 +23,20 @@ class PhoneDataWorker(val context: Context, params: WorkerParameters) : Coroutin
 
     override suspend fun doWork(): Result {
         return try {
-//            setupLocationClient()
-//            getCurrentLocation()
-//            val telephonyManager = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
-//            var signalStrength: Int = -1
-//            val phoneStateListener = object : PhoneStateListener() {
-//                override fun onSignalStrengthsChanged(ss: SignalStrength) {
-//                    super.onSignalStrengthsChanged(ss)
-//                    signalStrength = ss.gsmSignalStrength
-//                }
-//            }
-//            telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_SIGNAL_STRENGTHS)
-//            val phoneData = PhoneData(signalStrength.toDouble(), myLocation?.latitude
-//                    ?: 0.0, myLocation?.longitude ?: 0.0, "claro", getCurrentDate())
-//            phoneDataRepository.updatePhoneData(phoneData)
+            setupLocationClient()
+            getCurrentLocation()
+            val telephonyManager = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+            var signalStrength: Int = -1
+            val phoneStateListener = object : PhoneStateListener() {
+                override fun onSignalStrengthsChanged(ss: SignalStrength) {
+                    super.onSignalStrengthsChanged(ss)
+                    signalStrength = ss.gsmSignalStrength
+                }
+            }
+            telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_SIGNAL_STRENGTHS)
+            val phoneData = PhoneData(signalStrength.toDouble(), myLocation?.latitude
+                    ?: 0.0, myLocation?.longitude ?: 0.0, "claro", getCurrentDate())
+            phoneDataRepository.updatePhoneData(phoneData)
             Result.success()
         } catch (throwable: Throwable) {
             Log.e(throwable.message, throwable.toString())

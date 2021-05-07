@@ -26,6 +26,9 @@ class CrowdMapFragment : SupportMapFragment(), OnMapReadyCallback, PlaceSelectio
     private var _googleMap: GoogleMap? = null
     private lateinit var horizontals: ArrayList<PolylineOptions>
     private lateinit var verticals: ArrayList<PolylineOptions>
+    private var isOnLocation = false
+    private lateinit var currentLocation: LatLng
+
 
     override fun onPlaceSelected(place: Place?) {
         val placeLatLng = place!!.latLng
@@ -53,17 +56,18 @@ class CrowdMapFragment : SupportMapFragment(), OnMapReadyCallback, PlaceSelectio
         _googleMap = googleMap
 
         phoneDataViewModel.mapState.observe(viewLifecycleOwner) { mapState ->
-            if (mapState != null) {
+            if (mapState != null && !isOnLocation) {
                 updateMap(mapState, googleMap)
+                isOnLocation = true
             }
         }
     }
 
     private fun updateMap(mapState: MapState, googleMap: GoogleMap) {
         googleMap.run {
-            clear()
             val origin = mapState.origin
-            if (origin != null) {
+            if (origin != null && !isOnLocation) {
+                currentLocation = origin
                 animateCamera(CameraUpdateFactory.newLatLngZoom(origin, ZOOM))
             }
         }
@@ -74,13 +78,6 @@ class CrowdMapFragment : SupportMapFragment(), OnMapReadyCallback, PlaceSelectio
         gmap.setOnCameraIdleListener {
             setupMap(gmap)
             setupGrid(gmap)
-            phoneDataViewModel.mapState.observe(viewLifecycleOwner) {
-                if (it.origin != null) {
-                    gmap.animateCamera(CameraUpdateFactory.newLatLngZoom(it.origin, ZOOM))
-                } else {
-                    Toast.makeText(context, WAITING_LOCATION, Toast.LENGTH_SHORT).show()
-                }
-            }
         }
     }
 
@@ -100,11 +97,11 @@ class CrowdMapFragment : SupportMapFragment(), OnMapReadyCallback, PlaceSelectio
         val firstCoord = latLngs.first()
         val lastCoord = latLngs.last()
 
-//        phoneDataViewModel.getVisiblePhoneData(firstCoord, lastCoord, "claro").observe(this) { phoneDatas ->
-//            phoneDatas.map { phoneData ->
-//                fillQuad(gmap, phoneData, SCALE)
-//            }
-//        }
+        phoneDataViewModel.getVisiblePhoneData(firstCoord, lastCoord, "claro").observe(this) { phoneDatas ->
+            phoneDatas.map { phoneData ->
+                fillQuad(gmap, phoneData, SCALE)
+            }
+        }
     }
 
     private fun handleDrawLines(gmap: GoogleMap, po: ArrayList<PolylineOptions>) {
@@ -125,8 +122,8 @@ class CrowdMapFragment : SupportMapFragment(), OnMapReadyCallback, PlaceSelectio
     companion object {
         private const val SCALE = 0.002
         private const val ZOOM = 16.35f
-//        private const val ZOOM = 15.88f
         private const val LOG_TAG = "CMFragment"
         private const val WAITING_LOCATION = "Esperando por localização"
+        private const val networkOperator = "claro"
     }
 }

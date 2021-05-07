@@ -2,17 +2,9 @@ package droid.crowdmap.viewmodel
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.location.Location
-import android.os.Bundle
 import androidx.lifecycle.*
-import com.google.android.gms.common.ConnectionResult
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.common.api.GoogleApiClient
-import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
 import droid.crowdmap.basededados.PhoneDataEntity
 import droid.crowdmap.modelos.PhoneData
 import droid.crowdmap.repository.PhoneDataRepository
@@ -20,7 +12,6 @@ import kotlinx.coroutines.*
 import java.lang.Exception
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.resume
-import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 class PhoneDataViewModel(val context: Context) : ViewModel(), CoroutineScope {
@@ -30,6 +21,10 @@ class PhoneDataViewModel(val context: Context) : ViewModel(), CoroutineScope {
 
     private val phoneDataRepo by lazy {
         PhoneDataRepository(context)
+    }
+
+    private val locationLiveData by lazy {
+        LocationLiveData(context)
     }
 
     private val locationClient: FusedLocationProviderClient by lazy {
@@ -53,6 +48,15 @@ class PhoneDataViewModel(val context: Context) : ViewModel(), CoroutineScope {
 
     @SuppressLint("MissingPermission")
     private suspend fun loadLastLocation(): Boolean = suspendCoroutine { continuation ->
+//        locationLiveData.map {  location ->
+//            if(location != null) {
+//                _mapState.value = _mapState.value?.copy(origin = LatLng(location.latitude, location.longitude))
+//                continuation.resume(true)
+//            } else {
+//                _currentLocationError.value = LocationError.ErrorLocationUnavailable
+//                continuation.resume(false)
+//            }
+//        }
         locationClient.lastLocation.addOnCompleteListener { task ->
             val location = task.result
             if (location != null) {
